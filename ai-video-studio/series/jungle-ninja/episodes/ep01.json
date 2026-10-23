@@ -1,0 +1,49 @@
+{
+  "title": "Episode 1 - Laddoo kahan gaye?",
+  "end_card": "पार्ट 2 कल आएगा!\nफॉलो करो",
+  "shots": [
+    {
+      "visual": "Early morning in the village square. A big brass thali on a decorated table is completely empty except for a few golden crumbs. Bhola stands in front of it with both paws on his head, in total shock.",
+      "camera": "quick push-in on Bhola's shocked face",
+      "lines": [
+        {"speaker": "bhola", "hi": "हाय राम! त्योहार के सारे लड्डू गायब हो गए!"}
+      ]
+    },
+    {
+      "visual": "Kallu the crow sits on a branch above, eating a peanut, looking at Bhola whose mouth is sticky with sugar syrup. Bhola quickly tries to wipe his mouth with his scarf.",
+      "camera": "medium two-shot, Kallu in foreground",
+      "cast": ["bhola"],
+      "lines": [
+        {"speaker": "kallu", "hi": "मैंने तो कुछ नहीं देखा... बस भोला के मुँह पर चाशनी लगी है!"},
+        {"speaker": "bhola", "hi": "वो... वो तो पुरानी है!"}
+      ]
+    },
+    {
+      "visual": "A puff of smoke explodes in the square. Lomdi the ninja fox drops upside-down from the banyan tree on a rope and strikes a dramatic pose. Kallu rolls his eyes.",
+      "camera": "low angle hero shot, then cut to Kallu",
+      "cast": ["bhola"],
+      "lines": [
+        {"speaker": "lomdi", "hi": "चिंता मत करो! मैं हूँ लोमड़ी निन्जा, परछाई का दूसरा नाम!"},
+        {"speaker": "kallu", "hi": "तू तो पिछली बार झाड़ी में अटक गया था।"},
+        {"speaker": "lomdi", "hi": "वो... रणनीति थी!"}
+      ]
+    },
+    {
+      "visual": "Close-up on the ground: Lomdi kneels with a magnifying glass and finds a tiny star-shaped mark pressed into the dust next to a laddoo crumb. Bhola and Kallu lean in behind him, worried.",
+      "camera": "top-down close-up of the mark, then slow pull back to the three of them",
+      "cast": ["bhola", "kallu"],
+      "lines": [
+        {"speaker": "lomdi", "hi": "ये पंजे के निशान नहीं हैं... ये तो निन्जा स्टार है!"},
+        {"speaker": "bhola", "hi": "मतलब... कोई और निन्जा भी है?"}
+      ]
+    },
+    {
+      "visual": "Cliffhanger. On a hut rooftop in the misty background, the Shadow silhouette with glowing yellow eyes bites into a laddoo. The three heroes below do not notice. The Shadow slowly raises a shuriken toward Lomdi.",
+      "camera": "slow zoom from the heroes up to the rooftop figure",
+      "cast": ["lomdi", "bhola", "kallu"],
+      "lines": [
+        {"speaker": "saya", "hi": "अगला निशाना... तुम हो, लोमड़ी।"}
+      ]
+    }
+  ]
+}

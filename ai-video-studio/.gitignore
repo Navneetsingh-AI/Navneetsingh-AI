@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+series/*/clips/
+series/*/out/
+series/*/music/*
+!series/*/music/.gitkeep
+.cache/
