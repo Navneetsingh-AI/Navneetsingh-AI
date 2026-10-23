@@ -27,7 +27,34 @@ def shot_characters(shot):
     return names
 
 
+def _flow_voice_prompt(bible, index, shot):
+    """Prompt for Flow's saved characters, which already carry their own look and voice."""
+    chars = shot_characters(shot)
+    names = ", ".join(bible["characters"][c]["name_en"].split(" the ")[0] for c in chars)
+    lines = "\n".join(
+        f'{n}. {bible["characters"][l["speaker"]]["name_en"].split(" the ")[0]}: "{l["hi"]}"'
+        for n, l in enumerate(shot.get("lines", []), 1)
+    )
+    continuity = ""
+    if index > 0:
+        continuity = f"Continuity: start from the last frame of shot{index:02d} so the set and characters match.\n"
+    return (
+        f"{bible['style']}\n\n"
+        f"Setting: {bible['world']}\n"
+        f"Characters (attach these saved Flow characters): {names}\n"
+        f"Scene: {shot['visual']}\n"
+        f"Camera: {shot.get('camera', 'steady medium shot, slight handheld energy')}\n"
+        f"{continuity}"
+        "Dialogue, spoken in Hindi by the characters' own voices, one line at a time in this exact order "
+        "with a short pause between speakers (the next line starts only after the previous one ends):\n"
+        f"{lines}\n"
+        "Format: vertical 9:16. No music, no on-screen text, no captions, no logos."
+    )
+
+
 def flow_prompt(bible, episode, index, shot):
+    if bible.get("voice_mode") == "flow":
+        return _flow_voice_prompt(bible, index, shot)
     chars = shot_characters(shot)
     look = "\n".join(f"- {bible['characters'][c]['name_en']}: {bible['characters'][c]['look']}" for c in chars)
     continuity = ""
@@ -53,8 +80,10 @@ def flow_prompts_markdown(bible, episode):
     out = [f"# {bible['title']} - {episode['title']}\n"]
     out.append(
         "Paste each prompt into Google Flow, generate, download, and save the clip as "
-        "`clips/<episode>/shotNN.mp4` (e.g. `shot01.mp4`). Spoken Hindi is added later by the "
-        "studio, so keep Flow's audio off or ignore it.\n"
+        "`clips/<episode>/shotNN.mp4` (e.g. `shot01.mp4`). "
+        + ("Flow's own character voices speak the Hindi; the studio keeps that audio.\n"
+           if bible.get("voice_mode") == "flow"
+           else "Spoken Hindi is added later by the studio, so keep Flow's audio off or ignore it.\n")
     )
     for i, shot in enumerate(episode["shots"]):
         out.append(f"## shot{i + 1:02d}\n")

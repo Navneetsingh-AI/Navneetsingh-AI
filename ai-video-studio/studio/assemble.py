@@ -5,7 +5,7 @@ import subprocess
 import textwrap
 from pathlib import Path
 
-from . import captions, voice
+from . import align, captions, voice
 
 W, H, FPS = 1080, 1920, 30
 LEAD, GAP, TAIL = 0.35, 0.25, 0.55  # seconds before first line, between lines, after last line
@@ -47,7 +47,8 @@ def _find_clip(clips_dir, n):
     return None
 
 
-def build(series_dir, episode_id, bible, episode, dry_run=False, placeholders=False):
+def build(series_dir, episode_id, bible, episode, dry_run=False, placeholders=False, voice_mode=None, whisper=True):
+    voice_mode = voice_mode or bible.get("voice_mode", "tts")
     series_dir = Path(series_dir)
     clips_dir = series_dir / "clips" / episode_id
     out_dir = series_dir / "out" / episode_id
@@ -73,39 +74,59 @@ def build(series_dir, episode_id, bible, episode, dry_run=False, placeholders=Fa
             clip = work / f"placeholder{n:02d}.mp4"
             _placeholder_clip(clip, f"SHOT {n}: {shot['visual']}")
 
-        # Lay the dialogue out on this shot's local timeline.
-        t, placed = LEAD, []
-        for line in shot.get("lines", []):
-            ch = bible["characters"][line["speaker"]]
-            wav = voice.synth_line(line["hi"], ch["voice"], cache, dry_run=dry_run)
-            dur = voice.wav_seconds(wav)
-            placed.append((t, t + dur, wav, line["hi"], ch["caption_color"]))
-            t += dur + GAP
-        speech_end = (t - GAP) if placed else LEAD
-        length = max(MIN_SHOT, speech_end + TAIL)
-        if i == len(shots) - 1:
-            length += END_CARD_SECONDS
+        if voice_mode == "flow":
+            # The clip already carries the characters' voices: keep its audio, only work out caption timing.
+            clip_len = align.duration(clip)
+            times, speech_end = align.line_times(clip, shot.get("lines", []), bible["characters"], use_whisper=whisper)
+            length = max(MIN_SHOT, min(clip_len, speech_end + TAIL))
+            if i == len(shots) - 1:
+                length += END_CARD_SECONDS
+            placed = [(s_, e_, None, line["hi"], bible["characters"][line["speaker"]]["caption_color"])
+                      for (s_, e_), line in zip(times, shot.get("lines", []))]
+            vf = (f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},setsar=1,"
+                  f"tpad=stop_mode=clone:stop_duration=10")
+            af = f"aresample={voice.SAMPLE_RATE},apad,afade=t=out:st={max(0.0, length - END_CARD_SECONDS - 0.12 if i == len(shots) - 1 else length - 0.12):.3f}:d=0.12"
+            cmd = ["ffmpeg", "-y", "-i", str(clip)]
+            if _has_audio(clip):
+                cmd += ["-vf", vf, "-af", af, "-map", "0:v", "-map", "0:a"]
+            else:
+                cmd += ["-f", "lavfi", "-i", f"anullsrc=r={voice.SAMPLE_RATE}:cl=stereo",
+                        "-vf", vf, "-map", "0:v", "-map", "1:a"]
+        else:
+            # Lay the dialogue out on this shot's local timeline.
+            t, placed = LEAD, []
+            for line in shot.get("lines", []):
+                ch = bible["characters"][line["speaker"]]
+                wav = voice.synth_line(line["hi"], ch["voice"], cache, dry_run=dry_run)
+                dur = voice.wav_seconds(wav)
+                placed.append((t, t + dur, wav, line["hi"], ch["caption_color"]))
+                t += dur + GAP
+            speech_end = (t - GAP) if placed else LEAD
+            length = max(MIN_SHOT, speech_end + TAIL)
+            if i == len(shots) - 1:
+                length += END_CARD_SECONDS
 
-        voice_wav = work / f"voice{n:02d}.wav"
-        voice.mix_lines([(s, w) for s, _, w, _, _ in placed], length, voice_wav)
+            voice_wav = work / f"voice{n:02d}.wav"
+            voice.mix_lines([(s_, w) for s_, _, w, _, _ in placed], length, voice_wav)
+
+            vf = (f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},setsar=1,"
+                  f"tpad=stop_mode=clone:stop_duration=10")
+            cmd = ["ffmpeg", "-y", "-i", str(clip), "-i", str(voice_wav)]
+            if _has_audio(clip):
+                af = (f"[0:a]volume={AMBIENT_VOLUME},aresample={voice.SAMPLE_RATE},apad[amb];"
+                      f"[1:a]apad[v];[amb][v]amix=inputs=2:duration=longest:normalize=0[a]")
+                cmd += ["-filter_complex", f"[0:v]{vf}[v0];{af}", "-map", "[v0]", "-map", "[a]"]
+            else:
+                cmd += ["-vf", vf, "-map", "0:v", "-map", "1:a"]
 
         seg = work / f"seg{n:02d}.mp4"
-        vf = (f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},setsar=1,"
-              f"tpad=stop_mode=clone:stop_duration=10")
-        cmd = ["ffmpeg", "-y", "-i", str(clip), "-i", str(voice_wav)]
-        if _has_audio(clip):
-            af = (f"[0:a]volume={AMBIENT_VOLUME},aresample={voice.SAMPLE_RATE},apad[amb];"
-                  f"[1:a]apad[v];[amb][v]amix=inputs=2:duration=longest:normalize=0[a]")
-            cmd += ["-filter_complex", f"[0:v]{vf}[v0];{af}", "-map", "[v0]", "-map", "[a]"]
-        else:
-            cmd += ["-vf", vf, "-map", "0:v", "-map", "1:a"]
         cmd += ["-t", f"{length:.3f}", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
                 "-pix_fmt", "yuv420p", "-c:a", "aac", "-ar", str(voice.SAMPLE_RATE), "-ac", "2", str(seg)]
         _run(cmd)
         seg_files.append(seg)
 
-        for s, e, _, text, colour in placed:
-            cap_events.append((clock + s, clock + e, text, colour))
+        for s_, e_, _, text, colour in placed:
+            cap_events.append((clock + s_, clock + e_, text, colour))
         timeline.append({"shot": n, "start": round(clock, 2), "length": round(length, 2),
                          "lines": [{"speaker": l["speaker"], "hi": l["hi"]} for l in shot.get("lines", [])]})
         clock += length

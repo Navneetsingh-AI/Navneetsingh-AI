@@ -23,8 +23,8 @@
       "camera": "low angle hero shot, then cut to Kallu",
       "cast": ["bhola"],
       "lines": [
-        {"speaker": "chikki", "hi": "चिंता मत करो! मैं हूँ चिक्की निन्जा, परछाई का दूसरा नाम!"},
-        {"speaker": "kallu", "hi": "तू तो पिछली बार झाड़ी में अटक गया था।"},
+        {"speaker": "chikki", "hi": "चिंता मत करो! मैं हूँ चिक्की निन्जा!"},
+        {"speaker": "kallu", "hi": "तू तो झाड़ी में अटक गया था!"},
         {"speaker": "chikki", "hi": "वो... रणनीति थी!"}
       ]
     },
@@ -33,8 +33,8 @@
       "camera": "top-down close-up of the mark, then slow pull back to the three of them",
       "cast": ["bhola", "kallu"],
       "lines": [
-        {"speaker": "chikki", "hi": "ये पंजे के निशान नहीं हैं... ये तो निन्जा स्टार है!"},
-        {"speaker": "bhola", "hi": "मतलब... कोई और निन्जा भी है?"}
+        {"speaker": "chikki", "hi": "ये पंजे नहीं... ये निन्जा स्टार है!"},
+        {"speaker": "bhola", "hi": "मतलब... कोई और निन्जा है?"}
       ]
     },
     {

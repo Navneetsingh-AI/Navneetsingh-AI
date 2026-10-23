@@ -17,6 +17,8 @@ def main():
     p.add_argument("series")
     p.add_argument("episode")
     p.add_argument("--dry-run", action="store_true", help="skip TTS, use silent audio of estimated length")
+    p.add_argument("--voice", choices=["flow", "tts"], help="flow = keep Flow's voices (default per series); tts = Edge TTS Hindi")
+    p.add_argument("--no-whisper", action="store_true", help="skip Whisper, time captions from silence only")
     p.add_argument("--placeholders", action="store_true", help="use stand-in clips for any missing shotNN.mp4")
     a = p.parse_args()
 
@@ -31,7 +33,7 @@ def main():
         path.write_text(story.flow_prompts_markdown(bible, episode), encoding="utf-8")
         print(f"Wrote {path}\nSave generated clips as {series_dir / 'clips' / a.episode}/shot01.mp4, shot02.mp4, ...")
     else:
-        final, total = assemble.build(series_dir, a.episode, bible, episode, a.dry_run, a.placeholders)
+        final, total = assemble.build(series_dir, a.episode, bible, episode, a.dry_run, a.placeholders, a.voice, not a.no_whisper)
         print(f"Built {final} ({total:.1f}s)")
 
 

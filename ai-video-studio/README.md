@@ -1,8 +1,8 @@
 # AI Video Studio
 
-Turns a written story into a finished vertical (9:16) Hindi short, ready for Instagram Reels and YouTube Shorts.
+Turns a written story into a finished vertical (9:16) Hindi short for Instagram Reels and YouTube Shorts.
 
-Claude writes the story, Google Flow draws the shots, and this tool adds Hindi voices, captions and music and joins everything into one video.
+Claude writes the story, Google Flow draws and voices each shot with saved characters, and this tool adds Hindi captions, music and an end card and joins the shots into one video.
 
 ## Setup (once)
 
@@ -13,22 +13,24 @@ cd ai-video-studio
 pip install -r requirements.txt
 ```
 
+The first build downloads a speech model (about 460 MB) used to time the captions. If that fails or you skip it (`--no-whisper`), captions are timed from pauses in the audio, which is a little less exact.
+
 ## Making an episode (series `jungle-ninja`, episode `ep01`)
 
-1. **Get the Flow prompts**
+1. **Characters in Flow (once per series).** Each character is saved in Flow with a portrait, a body, a voice and character info. Voices used: Bhola, Kallu (Fenrir), Chikki (Autonoe), Saaya (Algenib).
+
+2. **Get the prompts**
    ```bash
    python -m studio prompts jungle-ninja ep01
    ```
    Open `series/jungle-ninja/out/ep01/flow_prompts.md`.
 
-2. **Generate each shot in Google Flow.** Paste prompt `shot01`, generate, download. For `shot02` onward, start from the last frame of the previous clip (Flow's "Frames to Video") so the characters match. Save the clips as:
+3. **Generate each shot in Flow.** Attach the saved characters named in the prompt, paste the prompt, generate. For shot 2 onward, start from the last frame of the previous clip. Save the clips as:
    ```
-   series/jungle-ninja/clips/ep01/shot01.mp4
-   series/jungle-ninja/clips/ep01/shot02.mp4
-   ...
+   series/jungle-ninja/clips/ep01/shot01.mp4 ... shot05.mp4
    ```
 
-3. **Build the video**
+4. **Build**
    ```bash
    python -m studio build jungle-ninja ep01
    ```
@@ -36,33 +38,35 @@ pip install -r requirements.txt
 
 Optional: drop a royalty-free music file (mp3/wav/m4a) into `series/jungle-ninja/music/`. It plays quietly under the voices.
 
-## Testing without Flow clips or internet
+## Voice modes
+
+- `flow` (default for this series): keeps the voices Flow generated, with lip sync. The tool only works out when each line is spoken so the coloured captions match.
+- `tts`: replaces Flow's audio with free Edge TTS Hindi voices (no lip sync). Use `--voice tts`.
+
+## Testing without Flow clips
 
 ```bash
-python -m studio build jungle-ninja ep01 --dry-run --placeholders
+python -m studio build jungle-ninja ep01 --placeholders --no-whisper
 ```
-Uses green placeholder clips and silent audio of the right length, so you can check timing and captions.
+Uses green placeholder clips for any missing shots.
 
-## How it fits together
+## Files
 
 | File | Job |
 | --- | --- |
-| `series/<name>/bible.json` | The cast: looks, caption colour and Hindi voice per character. The look text is pasted into every prompt to keep characters consistent. |
-| `series/<name>/episodes/epNN.json` | The episode script: shots, Hindi lines and who speaks. |
+| `series/<name>/bible.json` | The cast (look, caption colour, speaking pace), the visual style and the voice mode. |
+| `series/<name>/episodes/epNN.json` | The episode script: shots, Hindi lines and who speaks. Keep each shot to about 15 spoken words. |
 | `studio/story.py` | Builds the Flow prompts. |
-| `studio/voice.py` | Hindi voice per line using Edge TTS (free). Lines are cached, so rebuilds are fast. |
+| `studio/align.py` | Finds when each line is spoken in a clip (Whisper, or pauses as a fallback). |
 | `studio/captions.py` | Coloured Hindi captions, a few words at a time. |
-| `studio/assemble.py` | Fits each clip to its dialogue, mixes the audio and renders the final video. |
-
-## Voices
-
-Edge TTS has two Hindi voices: `hi-IN-MadhurNeural` (male) and `hi-IN-SwaraNeural` (female). Characters sound different through pitch and speed settings in `bible.json`. If they sound too flat, the voice step in `voice.py` is the only thing to swap for a paid service.
+| `studio/voice.py` | Edge TTS Hindi voices for `tts` mode. |
+| `studio/assemble.py` | Trims each clip to its dialogue, adds captions and music, renders the final video. |
 
 ## Writing the next episode
 
-Copy `episodes/ep01.json` to `ep02.json` and write the next part. End each one on a cliffhanger, and change the premise or the stakes between episodes. Don't repeat the same setup each time.
+Copy `episodes/ep01.json` to `ep02.json` and write the next part. End each episode on a cliffhanger, and change the premise or stakes between episodes instead of repeating the same setup.
 
 ## Before you post
 
 - Mark the video as AI-generated when YouTube or Instagram asks.
-- Review every video before publishing. This tool does not post for you.
+- Watch every video before publishing. This tool does not post for you.
