@@ -1,5 +1,5 @@
 {
-  "title": "Jungle Ninja - Lomdi aur Laddoo Chor",
+  "title": "Chikki Ninja aur Laddoo Chor",
   "style": "Vibrant 3D animated Pixar-style short, warm festival lighting, expressive cartoon animals with big eyes and exaggerated comedic acting, rich saturated colours, smooth cinematic motion.",
   "world": "A cheerful Indian jungle village with mud-and-bamboo huts, marigold garlands, diyas and festival decorations, a big banyan tree in the central square.",
   "characters": {
@@ -15,14 +15,14 @@
       "caption_color": "#9BE564",
       "voice": {"name": "hi-IN-MadhurNeural", "rate": "+14%", "pitch": "+28Hz"}
     },
-    "lomdi": {
-      "name_en": "Lomdi the ninja fox",
+    "chikki": {
+      "name_en": "Chikki the ninja fox",
       "look": "a small orange fox with a white-tipped tail wearing a dark indigo ninja outfit with a red headband and a face mask pulled down around the neck, tiny shuriken pouch on the belt, extremely overconfident",
       "caption_color": "#FF8FA3",
       "voice": {"name": "hi-IN-SwaraNeural", "rate": "+6%", "pitch": "+4Hz"}
     },
-    "saya": {
-      "name_en": "the Shadow",
+    "saaya": {
+      "name_en": "Saaya the shadow ninja",
       "look": "a mysterious dark silhouette on a rooftop, only glowing yellow eyes and the outline of a sharp ninja mask visible, mist around its feet",
       "caption_color": "#C77DFF",
       "voice": {"name": "hi-IN-MadhurNeural", "rate": "-18%", "pitch": "-38Hz"}

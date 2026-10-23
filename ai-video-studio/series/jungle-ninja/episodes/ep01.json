@@ -19,30 +19,30 @@
       ]
     },
     {
-      "visual": "A puff of smoke explodes in the square. Lomdi the ninja fox drops upside-down from the banyan tree on a rope and strikes a dramatic pose. Kallu rolls his eyes.",
+      "visual": "A puff of smoke explodes in the square. Chikki the ninja fox drops upside-down from the banyan tree on a rope and strikes a dramatic pose. Kallu rolls his eyes.",
       "camera": "low angle hero shot, then cut to Kallu",
       "cast": ["bhola"],
       "lines": [
-        {"speaker": "lomdi", "hi": "चिंता मत करो! मैं हूँ लोमड़ी निन्जा, परछाई का दूसरा नाम!"},
+        {"speaker": "chikki", "hi": "चिंता मत करो! मैं हूँ चिक्की निन्जा, परछाई का दूसरा नाम!"},
         {"speaker": "kallu", "hi": "तू तो पिछली बार झाड़ी में अटक गया था।"},
-        {"speaker": "lomdi", "hi": "वो... रणनीति थी!"}
+        {"speaker": "chikki", "hi": "वो... रणनीति थी!"}
       ]
     },
     {
-      "visual": "Close-up on the ground: Lomdi kneels with a magnifying glass and finds a tiny star-shaped mark pressed into the dust next to a laddoo crumb. Bhola and Kallu lean in behind him, worried.",
+      "visual": "Close-up on the ground: Chikki kneels with a magnifying glass and finds a tiny star-shaped mark pressed into the dust next to a laddoo crumb. Bhola and Kallu lean in behind her, worried.",
       "camera": "top-down close-up of the mark, then slow pull back to the three of them",
       "cast": ["bhola", "kallu"],
       "lines": [
-        {"speaker": "lomdi", "hi": "ये पंजे के निशान नहीं हैं... ये तो निन्जा स्टार है!"},
+        {"speaker": "chikki", "hi": "ये पंजे के निशान नहीं हैं... ये तो निन्जा स्टार है!"},
         {"speaker": "bhola", "hi": "मतलब... कोई और निन्जा भी है?"}
       ]
     },
     {
-      "visual": "Cliffhanger. On a hut rooftop in the misty background, the Shadow silhouette with glowing yellow eyes bites into a laddoo. The three heroes below do not notice. The Shadow slowly raises a shuriken toward Lomdi.",
+      "visual": "Cliffhanger. On a hut rooftop in the misty background, Saaya, a dark silhouette with glowing yellow eyes, bites into a laddoo. The three heroes below do not notice. Saaya slowly raises a shuriken toward Chikki.",
       "camera": "slow zoom from the heroes up to the rooftop figure",
-      "cast": ["lomdi", "bhola", "kallu"],
+      "cast": ["chikki", "bhola", "kallu"],
       "lines": [
-        {"speaker": "saya", "hi": "अगला निशाना... तुम हो, लोमड़ी।"}
+        {"speaker": "saaya", "hi": "अगला निशाना... तुम हो, चिक्की।"}
       ]
     }
   ]
