@@ -28,8 +28,8 @@
     },
     "chikki": {
       "pace": 1.0,
-      "name_en": "Chikki the inspector fox",
-      "look": "a small, sharp-eyed orange fox with white cheeks and a bushy white-tipped tail, wearing a neat khaki inspector uniform with a small gold badge, a khaki peaked cap with a red band, a notebook in her pocket and a magnifying glass on a cord around her neck, chin held high, bold and confident",
+      "name_en": "Chikki the detective fox",
+      "look": "a small, sharp-eyed orange fox with white cheeks and a bushy white-tipped tail, wearing a stylish tan detective trench jacket with the collar turned up and a matching tan detective cap with a small red band, a magnifying glass on a cord around her neck and a small notebook in her pocket, chin held high, bold and confident",
       "caption_color": "#FF8FA3",
       "voice": {
         "name": "hi-IN-SwaraNeural",
