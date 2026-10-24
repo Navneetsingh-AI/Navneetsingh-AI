@@ -55,7 +55,7 @@ Uses green placeholder clips for any missing shots.
 | File | Job |
 | --- | --- |
 | `series/<name>/bible.json` | The cast (look, caption colour, speaking pace), the visual style and the voice mode. |
-| `series/<name>/episodes/epNN.json` | The episode script: shots, Hindi lines and who speaks. Keep each shot to about 15 spoken words. Optional `"tail": seconds` on a shot holds the picture after the last word (used for cliffhanger beats). |
+| `series/<name>/episodes/epNN.json` | The episode script: shots, Hindi lines and who speaks. Keep each shot to about 15 spoken words. Optional `"tail": seconds` on a shot holds the picture after the last word (used for cliffhanger beats). Optional `"captions"` on a shot is a hand-timed caption track (`{"t": [start, end], "text": ..., "speaker": ...}`, seconds inside the clip) for clips where automatic timing is unreliable. |
 | `studio/story.py` | Builds the Flow prompts. |
 | `studio/align.py` | Finds when each line is spoken in a clip (Whisper, or pauses as a fallback). |
 | `studio/captions.py` | Coloured Hindi captions, a few words at a time. |

@@ -14,8 +14,18 @@ def _bgr(hex_rgb):
 
 
 def _chunks(text):
+    """Split into the fewest chunks of at most MAX_WORDS, with sizes as even as possible (5 words -> 3 + 2)."""
     words = text.split()
-    return [" ".join(words[i:i + MAX_WORDS]) for i in range(0, len(words), MAX_WORDS)] or [text]
+    if not words:
+        return [text]
+    k = -(-len(words) // MAX_WORDS)
+    base, extra = divmod(len(words), k)
+    out, i = [], 0
+    for n in range(k):
+        size = base + (1 if n < extra else 0)
+        out.append(" ".join(words[i:i + size]))
+        i += size
+    return out
 
 
 def build_ass(events, end_card, end_start, total_seconds, font_name="Noto Sans Devanagari"):

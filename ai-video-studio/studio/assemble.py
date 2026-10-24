@@ -77,12 +77,18 @@ def build(series_dir, episode_id, bible, episode, dry_run=False, placeholders=Fa
         if voice_mode == "flow":
             # The clip already carries the characters' voices: keep its audio, only work out caption timing.
             clip_len = align.duration(clip)
-            times, speech_end = align.line_times(clip, shot.get("lines", []), bible["characters"], use_whisper=whisper)
+            if shot.get("captions"):
+                # Hand-timed caption track (seconds inside the clip), for clips where automatic timing is unreliable.
+                placed = [(c["t"][0], c["t"][1], None, c["text"], bible["characters"][c["speaker"]]["caption_color"])
+                          for c in shot["captions"]]
+                speech_end = max(p_[1] for p_ in placed)
+            else:
+                times, speech_end = align.line_times(clip, shot.get("lines", []), bible["characters"], use_whisper=whisper)
+                placed = [(s_, e_, None, line["hi"], bible["characters"][line["speaker"]]["caption_color"])
+                          for (s_, e_), line in zip(times, shot.get("lines", []))]
             length = max(MIN_SHOT, min(clip_len, speech_end + shot.get("tail", TAIL)))
             if i == len(shots) - 1:
                 length += END_CARD_SECONDS
-            placed = [(s_, e_, None, line["hi"], bible["characters"][line["speaker"]]["caption_color"])
-                      for (s_, e_), line in zip(times, shot.get("lines", []))]
             vf = (f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},setsar=1,"
                   f"tpad=stop_mode=clone:stop_duration=10")
             af = f"aresample={voice.SAMPLE_RATE},apad,afade=t=out:st={max(0.0, length - END_CARD_SECONDS - 0.12 if i == len(shots) - 1 else length - 0.12):.3f}:d=0.12"
