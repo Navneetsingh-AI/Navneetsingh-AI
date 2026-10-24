@@ -44,8 +44,25 @@ A comedy-mystery for a Hindi audience. Things keep going missing in the festival
 | 9 | Chhat par chase | 2 | A rooftop chase. The boss's long tail is seen for a second. |
 | 10 | Asli chor | 1 | The reveal (see below), and a hook into season 2. |
 
-### Planned reveal (spoiler, easy to change)
+### Planned reveal (spoiler, LOCKED: Chulbul is the boss)
 The boss is **Chulbul**. Chikki had been secretly packing to leave for a bigger city because the village was too quiet, and Chulbul, who adores her, staged the thefts to keep her here. Kallu was in it for the samosas. Bhola was framed by accident. The golden laddoo is returned and Diwali is saved. The last shot: a new note signed with a different symbol, so season 2 has a real mystery.
+
+### Clue tracker (hide these in the background; never point at them)
+
+| Ep | Hidden clue about Chulbul | Where |
+| --- | --- | --- |
+| 1 | A small gold paw-print sticker on his notebook cover | Shot 3 (arrival) |
+| 2 | Licks gold dust off his paw, slips out of the handcuffs too easily | Shot 3 (done) |
+| 3 | Falls asleep exactly when the shadow crosses; gold smudges on his paws | Shot 3 |
+| 4 | Volunteers to guard Bhola's cell and "brings food"; a tiny suitcase is visible under Chikki's desk | Background |
+| 5 | His sneeze ruins the trap right before Kallu would have stepped in it | The sneeze looks like an accident |
+| 6 | The boss's voice through a bamboo tube is oddly squeaky and says "सीक्रेट" the same way | Voice only |
+| 7 | He is the only one who is not surprised that Bhola found the laddoo | Reaction shot |
+| 8 | He volunteers to deliver the fake confession | Dialogue |
+| 9 | A long thin tail with a bandage is seen for one second | Chase |
+| 10 | Chikki finds her own packed suitcase and the note in his handwriting | Reveal |
+
+Rule: each clue has an innocent explanation in the same shot, so viewers can only spot them on a rewatch or in the comments.
 
 ## Parked ideas
 
