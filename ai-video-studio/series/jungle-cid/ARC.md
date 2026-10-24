@@ -45,7 +45,7 @@ A comedy-mystery for a Hindi audience. Things keep going missing in the festival
 | 10 | Asli chor | The reveal (see below), and a hook into season 2. |
 
 ### Planned reveal (spoiler, LOCKED: Chulbul is the boss)
-The boss is **Chulbul**. Chikki had been secretly packing to leave for a bigger city because the village was too quiet, and Chulbul, who adores her, staged the thefts to keep her here. Kallu was in it for the samosas. Bhola was framed by accident. The golden laddoo is returned and Diwali is saved. The last shot: a new note signed with a different symbol, so season 2 has a real mystery.
+The boss is **Chulbul**. Chikki had been secretly packing to leave for a bigger city because the village was too quiet, and Chulbul, who adores her, staged the thefts to keep her here. Kallu was in it for the samosas. Bhola was framed by accident. The golden laddoo is returned and the festival is saved. The last shot: a new note signed with a different symbol, so season 2 has a real mystery.
 
 ### Clue tracker (hide these in the background; never point at them)
 
