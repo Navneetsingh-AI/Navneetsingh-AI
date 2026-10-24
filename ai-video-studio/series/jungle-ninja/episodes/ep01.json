@@ -19,17 +19,17 @@
       ]
     },
     {
-      "visual": "A puff of smoke explodes in the square. Chikki the ninja fox drops upside-down from the banyan tree on a rope and strikes a dramatic pose. Kallu rolls his eyes.",
-      "camera": "low angle hero shot, then cut to Kallu",
+      "visual": "Chikki the inspector fox strides into the square, flips open a small gold badge, and snaps her magnifying glass up in front of her eye with a confident smirk. Kallu rolls his eyes.",
+      "camera": "low angle hero shot of Chikki, then cut to Kallu",
       "cast": ["bhola"],
       "lines": [
-        {"speaker": "chikki", "hi": "चिंता मत करो! मैं हूँ चिक्की निन्जा!"},
-        {"speaker": "kallu", "hi": "तू तो झाड़ी में अटक गया था!"},
-        {"speaker": "chikki", "hi": "वो... रणनीति थी!"}
+        {"speaker": "chikki", "hi": "चिंता मत करो! मैं हूँ इंस्पेक्टर चिक्की!"},
+        {"speaker": "kallu", "hi": "पिछली बार तूने खुद को ही पकड़ लिया था!"},
+        {"speaker": "chikki", "hi": "वो... जाँच का हिस्सा था!"}
       ]
     },
     {
-      "visual": "Close-up on the ground: Chikki kneels with a magnifying glass and finds a tiny star-shaped mark pressed into the dust next to a laddoo crumb. Bhola and Kallu lean in behind her, worried.",
+      "visual": "Close-up on the ground: Chikki crouches with her magnifying glass and finds a tiny star-shaped mark pressed into the dust next to a laddoo crumb. Bhola and Kallu lean in behind her, worried.",
       "camera": "top-down close-up of the mark, then slow pull back to the three of them",
       "cast": ["bhola", "kallu"],
       "lines": [

@@ -1,5 +1,5 @@
 {
-  "title": "Chikki Ninja aur Laddoo Chor",
+  "title": "Inspector Chikki aur Laddoo Chor",
   "voice_mode": "flow",
   "style": "Vibrant 3D animated Pixar-style short, warm festival lighting, expressive cartoon animals with big eyes and exaggerated comedic acting, rich saturated colours, smooth cinematic motion.",
   "world": "A cheerful Indian jungle village with mud-and-bamboo huts, marigold garlands, diyas and festival decorations, a big banyan tree in the central square.",
@@ -28,13 +28,13 @@
     },
     "chikki": {
       "pace": 1.0,
-      "name_en": "Chikki the ninja fox",
-      "look": "a small orange fox with a white-tipped tail wearing a dark indigo ninja outfit with a red headband and a face mask pulled down around the neck, tiny shuriken pouch on the belt, extremely overconfident",
+      "name_en": "Chikki the inspector fox",
+      "look": "a small, sharp-eyed orange fox with white cheeks and a bushy white-tipped tail, wearing a neat khaki inspector uniform with a small gold badge, a khaki peaked cap with a red band, a notebook in her pocket and a magnifying glass on a cord around her neck, chin held high, bold and confident",
       "caption_color": "#FF8FA3",
       "voice": {
         "name": "hi-IN-SwaraNeural",
-        "rate": "+6%",
-        "pitch": "+4Hz"
+        "rate": "+10%",
+        "pitch": "+14Hz"
       }
     },
     "saaya": {
