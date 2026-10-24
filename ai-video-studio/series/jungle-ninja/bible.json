@@ -9,28 +9,55 @@
       "name_en": "Bhola the sloth bear",
       "look": "a chubby, fluffy black sloth bear with a pale snout and a cream chest patch, small round ears, a red-and-yellow checked gamchha scarf around his neck, always looks hungry and innocent",
       "caption_color": "#FFD166",
-      "voice": {"name": "hi-IN-MadhurNeural", "rate": "-8%", "pitch": "-18Hz"}
+      "voice": {
+        "name": "hi-IN-MadhurNeural",
+        "rate": "-8%",
+        "pitch": "-18Hz"
+      }
     },
     "kallu": {
       "pace": 1.0,
       "name_en": "Kallu the crow",
       "look": "a glossy black crow with sharp bright eyes, a tiny green turban, one feather sticking up on his head, perched on branches, always smirking and gossiping",
       "caption_color": "#9BE564",
-      "voice": {"name": "hi-IN-MadhurNeural", "rate": "+14%", "pitch": "+28Hz"}
+      "voice": {
+        "name": "hi-IN-MadhurNeural",
+        "rate": "+14%",
+        "pitch": "+28Hz"
+      }
     },
     "chikki": {
       "pace": 1.0,
       "name_en": "Chikki the ninja fox",
       "look": "a small orange fox with a white-tipped tail wearing a dark indigo ninja outfit with a red headband and a face mask pulled down around the neck, tiny shuriken pouch on the belt, extremely overconfident",
       "caption_color": "#FF8FA3",
-      "voice": {"name": "hi-IN-SwaraNeural", "rate": "+6%", "pitch": "+4Hz"}
+      "voice": {
+        "name": "hi-IN-SwaraNeural",
+        "rate": "+6%",
+        "pitch": "+4Hz"
+      }
     },
     "saaya": {
       "pace": 3.0,
       "name_en": "Saaya the shadow ninja",
       "look": "a mysterious dark silhouette on a rooftop, only glowing yellow eyes and the outline of a sharp ninja mask visible, mist around its feet",
       "caption_color": "#C77DFF",
-      "voice": {"name": "hi-IN-MadhurNeural", "rate": "-18%", "pitch": "-38Hz"}
+      "voice": {
+        "name": "hi-IN-MadhurNeural",
+        "rate": "-18%",
+        "pitch": "-38Hz"
+      }
+    },
+    "chulbul": {
+      "pace": 1.0,
+      "name_en": "Chulbul the rat",
+      "look": "a tiny, cute grey-brown rat with big round pink-inside ears, a pair of big buck teeth with one tiny chip, a twitchy pink nose and whiskers, an oversized brown newsboy cap that keeps sliding over one eye, a small sky-blue vest, and a long thin pink tail with a small bandage on it, always grinning mischievously",
+      "caption_color": "#4CC9F0",
+      "voice": {
+        "name": "hi-IN-MadhurNeural",
+        "rate": "+22%",
+        "pitch": "+40Hz"
+      }
     }
   }
 }
