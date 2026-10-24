@@ -26,6 +26,9 @@ def main():
     bible = story.load_series(series_dir)
     episode = story.load_episode(series_dir, a.episode)
 
+    for w in story.check_shots(episode):
+        print(f"WARNING {w}")
+
     if a.command == "prompts":
         out = series_dir / "out" / a.episode
         out.mkdir(parents=True, exist_ok=True)

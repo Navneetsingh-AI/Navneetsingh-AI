@@ -64,6 +64,8 @@ Uses green placeholder clips for any missing shots.
 
 ## Writing the next episode
 
+**Flow limits to design around:** a shot can attach at most 3 saved characters, and voices get mixed up when more than 2 characters speak in one shot. Keep every shot to 3 characters or fewer and 2 speakers or fewer. `python -m studio prompts ...` prints a WARNING for any shot that breaks this. Characters who are not attached cannot appear recognisably, so cut to them in a separate shot.
+
 Copy `episodes/ep01.json` to `ep02.json` and write the next part. End each episode on a cliffhanger, and change the premise or stakes between episodes instead of repeating the same setup.
 
 ## Before you post

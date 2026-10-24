@@ -3,9 +3,8 @@
   "end_card": "पार्ट 4 कल!\nदिवाली में 8 दिन बाकी",
   "shots": [
     {
-      "visual": "Evening at the banyan tree shrine. A glowing golden laddoo sits on a decorated pedestal under a soft spotlight of warm light, with village animals gathered around in awe. Chikki stands in front of it, magnifying glass in hand, speaking firmly to the crowd.",
+      "visual": "Evening at the banyan tree shrine. A glowing golden laddoo sits on a decorated pedestal under a soft warm spotlight, with a crowd of small silhouettes gathered around in awe. Chikki stands in front of it, speaking firmly to the crowd.",
       "camera": "slow reveal of the glowing golden laddoo, then medium shot of Chikki",
-      "cast": [],
       "lines": [
         {
           "speaker": "chikki",
@@ -14,12 +13,8 @@
       ]
     },
     {
-      "visual": "Chikki points at the gate and assigns guard duty. Bhola looks alarmed and scratches his head. Kallu lands next to him with a helpful, innocent face while his eyes dart toward the golden laddoo.",
-      "camera": "medium three-shot, Chikki pointing, Bhola nervous, Kallu close",
-      "cast": [
-        "bhola",
-        "kallu"
-      ],
+      "visual": "Chikki points firmly at the shrine gate, assigning guard duty. Bhola looks alarmed and scratches his head.",
+      "camera": "medium two-shot, Chikki pointing, Bhola nervous",
       "lines": [
         {
           "speaker": "chikki",
@@ -28,19 +23,26 @@
         {
           "speaker": "bhola",
           "hi": "पर मैं तो सो जाता हूँ!"
-        },
-        {
-          "speaker": "kallu",
-          "hi": "मैं साथ हूँ!"
         }
       ]
     },
     {
-      "visual": "Deep night, bright moon. Bhola is snoring loudly at the gate. Kallu is no longer next to him. Chikki hides behind a pot, whispering to Chulbul who is slumped sleepily against the pot with his cap over his eyes, tiny golden smudges on his paws. In the background a dark shape slips across the shrine toward the pedestal.",
+      "visual": "Deep night, bright moon, at the shrine gate. Kallu lands next to Bhola with a helpful, innocent face. Bhola yawns, slumps against the gate and falls asleep snoring. Kallu waits, then tiptoes away toward the golden laddoo in the background, glancing back with a sly smile.",
+      "camera": "moonlit medium shot of Bhola and Kallu, then follow Kallu tiptoeing away",
+      "lines": [
+        {
+          "speaker": "kallu",
+          "hi": "फिक्र मत कर, मैं साथ हूँ!"
+        },
+        {
+          "speaker": "bhola",
+          "hi": "ठीक है... खर्र... खर्र..."
+        }
+      ]
+    },
+    {
+      "visual": "Deep night. Chikki hides behind a pot, whispering to Chulbul who is slumped sleepily against the pot with his cap over his eyes, tiny golden smudges on his paws. In the far background a dark shape slips across the shrine toward the pedestal.",
       "camera": "wide moonlit shot, slow push toward Chikki and Chulbul while a dark shape crosses behind them",
-      "cast": [
-        "bhola"
-      ],
       "lines": [
         {
           "speaker": "chikki",
@@ -53,11 +55,9 @@
       ]
     },
     {
-      "visual": "Cliffhanger. Dawn. Chikki lifts the golden laddoo from the pedestal, it feels light, and it cracks in her paw, revealing plain besan inside with golden paint flaking off. Chikki is shocked. Bhola wakes up, sleepy, with golden flakes on his tongue. Chikki slowly turns toward Bhola, eyes narrowing, while Kallu gasps dramatically behind him.",
+      "visual": "Cliffhanger. Dawn. Chikki lifts the golden laddoo from the pedestal, it feels light, and it cracks in her paw, revealing plain besan inside with golden paint flaking off. Bhola wakes up behind her, sleepy, with golden flakes on his tongue. Chikki slowly turns toward Bhola, eyes narrowing.",
       "camera": "close-up of the laddoo cracking open, then slow push in on Chikki's narrowed eyes, then Bhola's guilty face",
-      "cast": [
-        "kallu"
-      ],
+      "tail": 2.0,
       "lines": [
         {
           "speaker": "chikki",
@@ -67,8 +67,7 @@
           "speaker": "bhola",
           "hi": "मैंने तो... बस एक बार चाटा था!"
         }
-      ],
-      "tail": 2.0
+      ]
     }
   ]
 }

@@ -45,8 +45,9 @@ def _flow_voice_prompt(bible, index, shot):
         f"Scene: {shot['visual']}\n"
         f"Camera: {shot.get('camera', 'steady medium shot, slight handheld energy')}\n"
         f"{continuity}"
-        "Dialogue, spoken in Hindi by the characters' own voices, one line at a time in this exact order "
-        "with a short pause between speakers (the next line starts only after the previous one ends):\n"
+        "Dialogue, spoken in Hindi, one line at a time in this exact order with a short pause between speakers "
+        "(the next line starts only after the previous one ends). Each line is spoken ONLY by the character "
+        "named, in that character's own saved voice, and only that character's mouth moves for it:\n"
         f"{lines}\n"
         "Format: vertical 9:16. No music, no on-screen text, no captions, no logos."
     )
@@ -89,3 +90,20 @@ def flow_prompts_markdown(bible, episode):
         out.append(f"## shot{i + 1:02d}\n")
         out.append("```text\n" + flow_prompt(bible, episode, i, shot) + "\n```\n")
     return "\n".join(out)
+
+
+MAX_CHARACTERS = 3
+MAX_SPEAKERS = 2
+
+
+def check_shots(episode):
+    """Flow attaches at most 3 saved characters per shot, and voices get mixed up with more than 2 speakers."""
+    warnings = []
+    for i, shot in enumerate(episode["shots"], 1):
+        chars = shot_characters(shot)
+        speakers = {l["speaker"] for l in shot.get("lines", [])}
+        if len(chars) > MAX_CHARACTERS:
+            warnings.append(f"shot{i:02d}: {len(chars)} characters attached (Flow allows {MAX_CHARACTERS})")
+        if len(speakers) > MAX_SPEAKERS:
+            warnings.append(f"shot{i:02d}: {len(speakers)} speakers (voices may get mixed up above {MAX_SPEAKERS})")
+    return warnings

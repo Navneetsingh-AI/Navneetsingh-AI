@@ -30,12 +30,8 @@
       ]
     },
     {
-      "visual": "Chikki walks confidently into the square, stops with her hands on her hips and stares sharply at Bhola and Kallu. Behind her tiny Chulbul the white rat scurries along carrying a huge notebook with a tiny gold paw-print sticker on its cover, trips over it and his cap slides over his eyes. Bhola and Kallu freeze.",
-      "camera": "low angle hero shot of Chikki, then cut to Chulbul tripping",
-      "cast": [
-        "bhola",
-        "kallu"
-      ],
+      "visual": "Chikki walks confidently into the village square from the left, stops with her hands on her hips and stares sharply ahead at someone off-screen. Behind her tiny Chulbul the white rat scurries along carrying a huge notebook with a tiny gold paw-print sticker on its cover, trips over it and his cap slides over his eyes.",
+      "camera": "low angle shot of Chikki walking in, then the camera arcs right to reveal Chulbul tripping behind her",
       "lines": [
         {
           "speaker": "chikki",
@@ -52,12 +48,12 @@
       ]
     },
     {
-      "visual": "Cliffhanger. Chikki crouches by the empty thali with her magnifying glass and finds small three-toed prints in the dust next to Bhola's huge paw prints. Chulbul squints at the prints from upside-down. A single black feather drifts down onto Chikki's notebook. She slowly looks up toward the banyan tree, where Kallu freezes with a nervous smile.",
+      "visual": "Cliffhanger. Chikki crouches by the empty brass thali with her magnifying glass and finds small three-toed prints in the dust next to huge paw prints. Chulbul squints at the prints hanging upside-down from the table edge. A single black feather drifts down onto Chikki's notebook. She slowly looks up toward the banyan tree, where Kallu the crow sits frozen with a nervous smile and a sweat drop.",
       "camera": "top-down on the prints, then a slow tilt up from the feather to Kallu in the tree",
       "cast": [
-        "bhola",
         "kallu"
       ],
+      "tail": 2.0,
       "lines": [
         {
           "speaker": "chikki",
@@ -67,8 +63,7 @@
           "speaker": "chulbul",
           "hi": "या पैर सिकोड़ लिए?"
         }
-      ],
-      "tail": 2.0
+      ]
     }
   ]
 }
