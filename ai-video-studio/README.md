@@ -60,6 +60,7 @@ Uses green placeholder clips for any missing shots.
 | `studio/align.py` | Finds when each line is spoken in a clip (Whisper, or pauses as a fallback). |
 | `studio/captions.py` | Coloured Hindi captions, a few words at a time. |
 | `studio/voice.py` | Edge TTS Hindi voices for `tts` mode. |
+| `studio/marks.py` | Fills in Flow's small corner marks (the "Veo" text or the sparkle) from the surrounding picture. Turn off with `--keep-marks`. The invisible SynthID mark is not affected. |
 | `studio/assemble.py` | Trims each clip to its dialogue, adds captions and music, renders the final video. |
 
 ## Writing the next episode

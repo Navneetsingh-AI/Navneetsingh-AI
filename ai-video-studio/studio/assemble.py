@@ -5,7 +5,7 @@ import subprocess
 import textwrap
 from pathlib import Path
 
-from . import align, captions, voice
+from . import align, captions, marks, voice
 
 W, H, FPS = 1080, 1920, 30
 LEAD, GAP, TAIL = 0.35, 0.25, 0.55  # seconds before first line, between lines, after last line
@@ -47,7 +47,7 @@ def _find_clip(clips_dir, n):
     return None
 
 
-def build(series_dir, episode_id, bible, episode, dry_run=False, placeholders=False, voice_mode=None, whisper=True):
+def build(series_dir, episode_id, bible, episode, dry_run=False, placeholders=False, voice_mode=None, whisper=True, clean_marks=True):
     voice_mode = voice_mode or bible.get("voice_mode", "tts")
     series_dir = Path(series_dir)
     clips_dir = series_dir / "clips" / episode_id
@@ -73,6 +73,9 @@ def build(series_dir, episode_id, bible, episode, dry_run=False, placeholders=Fa
             clips_dir.mkdir(parents=True, exist_ok=True)
             clip = work / f"placeholder{n:02d}.mp4"
             _placeholder_clip(clip, f"SHOT {n}: {shot['visual']}")
+
+        if clean_marks:
+            clip = marks.clean(clip, work / f"clean{n:02d}.mp4", shot.get("mark", "auto"))
 
         if voice_mode == "flow":
             # The clip already carries the characters' voices: keep its audio, only work out caption timing.
