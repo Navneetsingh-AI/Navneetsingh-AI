@@ -78,7 +78,7 @@ def build(series_dir, episode_id, bible, episode, dry_run=False, placeholders=Fa
             # The clip already carries the characters' voices: keep its audio, only work out caption timing.
             clip_len = align.duration(clip)
             times, speech_end = align.line_times(clip, shot.get("lines", []), bible["characters"], use_whisper=whisper)
-            length = max(MIN_SHOT, min(clip_len, speech_end + TAIL))
+            length = max(MIN_SHOT, min(clip_len, speech_end + shot.get("tail", TAIL)))
             if i == len(shots) - 1:
                 length += END_CARD_SECONDS
             placed = [(s_, e_, None, line["hi"], bible["characters"][line["speaker"]]["caption_color"])
@@ -102,7 +102,7 @@ def build(series_dir, episode_id, bible, episode, dry_run=False, placeholders=Fa
                 placed.append((t, t + dur, wav, line["hi"], ch["caption_color"]))
                 t += dur + GAP
             speech_end = (t - GAP) if placed else LEAD
-            length = max(MIN_SHOT, speech_end + TAIL)
+            length = max(MIN_SHOT, speech_end + shot.get("tail", TAIL))
             if i == len(shots) - 1:
                 length += END_CARD_SECONDS
 
