@@ -1,0 +1,84 @@
+{
+  "title": "Episode 2 - Chulbul ki topi",
+  "end_card": "पार्ट 3 कल!\nदिवाली में 9 दिन बाकी",
+  "shots": [
+    {
+      "visual": "Dawn in the market square. Every single diya from the lamp stall has vanished, only empty clay trays remain. On the ground lies a small brown newsboy cap. Chikki holds it up between two fingers with her eyebrow raised. Chulbul stares at the cap with wide eyes, sweating.",
+      "camera": "slow pan across the empty trays, ending on Chikki holding up the cap",
+      "cast": [
+        "chulbul"
+      ],
+      "lines": [
+        {
+          "speaker": "chikki",
+          "hi": "एक भी दिया नहीं बचा! और ये टोपी चुलबुल, तेरी है!"
+        },
+        {
+          "speaker": "chulbul",
+          "hi": "मेरी? नहीं! ये मेरी जुड़वाँ टोपी है!"
+        }
+      ]
+    },
+    {
+      "visual": "Chikki clips a tiny pair of handcuffs onto Chulbul's tail. Chulbul wriggles and squeaks. Bhola watches in terror, hands on his cheeks. Kallu watches from a roof edge, delighted, rubbing his wings together.",
+      "camera": "medium shot on Chikki and Chulbul, then cut to Bhola's scared face, then Kallu's smirk",
+      "cast": [
+        "bhola",
+        "kallu"
+      ],
+      "lines": [
+        {
+          "speaker": "chikki",
+          "hi": "चुलबुल, तू गिरफ्तार!"
+        },
+        {
+          "speaker": "chulbul",
+          "hi": "मैडम! मुझे फँसाया गया है!"
+        },
+        {
+          "speaker": "bhola",
+          "hi": "हाय राम! अब चुलबुल भी चोर?"
+        }
+      ]
+    },
+    {
+      "visual": "Chikki sniffs the cap and turns it over with her magnifying glass: tiny golden shimmering dust sticks to the lining. She looks up, serious. Behind her Chulbul slips out of the handcuffs, guilty-looking, and quickly licks a golden crumb off his paw.",
+      "camera": "extreme close-up on the golden dust under the magnifying glass, then pull back to Chikki",
+      "cast": [
+        "chulbul"
+      ],
+      "lines": [
+        {
+          "speaker": "chikki",
+          "hi": "टोपी पर सोने की धूल? चोर की नज़र किसी बड़ी चीज़ पर है!"
+        },
+        {
+          "speaker": "chulbul",
+          "hi": "बड़ी चीज़... मतलब समोसा?"
+        }
+      ]
+    },
+    {
+      "visual": "Cliffhanger. Chikki finds a folded note tucked in the cap lining and unfolds it. Everyone leans in. A dramatic close-up of the note, then Bhola faints backward with a thud. Kallu on the roof whispers to himself with a sly grin.",
+      "camera": "close-up on the note in Chikki's paws, then wide shot as Bhola faints, then Kallu's grin",
+      "cast": [
+        "chulbul",
+        "bhola"
+      ],
+      "lines": [
+        {
+          "speaker": "chikki",
+          "hi": "सोने का लड्डू! अगला निशाना वही है!"
+        },
+        {
+          "speaker": "bhola",
+          "hi": "हाय राम..."
+        },
+        {
+          "speaker": "kallu",
+          "hi": "अब आएगा असली मज़ा..."
+        }
+      ]
+    }
+  ]
+}

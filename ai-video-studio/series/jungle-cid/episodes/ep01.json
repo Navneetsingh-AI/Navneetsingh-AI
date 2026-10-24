@@ -1,6 +1,6 @@
 {
   "title": "Episode 1 - Kya main hi chor hoon?",
-  "end_card": "पार्ट 2 कल!\nअसली चोर कौन?",
+  "end_card": "पार्ट 2 कल!\nदिवाली में 10 दिन बाकी",
   "shots": [
     {
       "visual": "Early morning in the village square after the festival night. The big brass thali on the decorated table is empty except for crumbs. Bhola has just woken up under the banyan tree with laddoo crumbs and sticky syrup on his snout, paws and scarf. He stares at his sticky paws, then at the empty thali, in horror.",
@@ -13,37 +13,19 @@
       ]
     },
     {
-      "visual": "Kallu the crow sits on a branch above Bhola with a stolen laddoo hidden behind his wing, which the audience can see but Bhola cannot. Kallu puts on a fake worried face for Bhola, while a sly smirk slips out when Bhola looks away.",
-      "camera": "medium two-shot, Kallu in foreground",
+      "visual": "Kallu the crow hops down onto Bhola's shoulder with a stolen laddoo hidden behind his wing, which the audience can see but Bhola cannot. Kallu whispers in Bhola's ear with a fake worried face, glancing around. Bhola trembles with huge scared eyes and nods quickly.",
+      "camera": "close two-shot on their faces, Kallu whispering, the hidden laddoo visible behind his wing",
       "cast": [
         "bhola"
       ],
       "lines": [
         {
           "speaker": "kallu",
-          "hi": "मैंने देखा... तू नींद में लड्डू खा गया!"
+          "hi": "तूने नींद में लड्डू खाए! समोसा दे, मैं सँभाल लूँगा!"
         },
         {
           "speaker": "bhola",
-          "hi": "हाय राम! अब मेरा क्या होगा?"
-        }
-      ]
-    },
-    {
-      "visual": "Kallu hops down onto Bhola's shoulder and whispers in his ear, glancing around to check nobody is listening. Bhola trembles with huge scared eyes and nods quickly.",
-      "camera": "close two-shot on their faces, Kallu whispering",
-      "cast": [
-        "bhola",
-        "kallu"
-      ],
-      "lines": [
-        {
-          "speaker": "kallu",
-          "hi": "चुप रह, मैं सँभाल लूँगा। बस तेरा समोसा मेरा!"
-        },
-        {
-          "speaker": "bhola",
-          "hi": "ठीक है, ठीक है!"
+          "hi": "ठीक है... हाय राम!"
         }
       ]
     },
@@ -57,7 +39,7 @@
       "lines": [
         {
           "speaker": "chikki",
-          "hi": "रुको! मैं इंस्पेक्टर चिक्की!"
+          "hi": "रुको! मैं चिक्की! दिवाली से पहले चोर पकड़ूँगी!"
         },
         {
           "speaker": "chulbul",
