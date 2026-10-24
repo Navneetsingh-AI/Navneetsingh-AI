@@ -1,8 +1,8 @@
 {
-  "title": "Inspector Chikki aur Laddoo Chor",
+  "title": "Jungle CID",
   "voice_mode": "flow",
   "style": "Vibrant 3D animated Pixar-style short, warm festival lighting, expressive cartoon animals with big eyes and exaggerated comedic acting, rich saturated colours, smooth cinematic motion.",
-  "world": "A cheerful Indian jungle village with mud-and-bamboo huts, marigold garlands, diyas and festival decorations, a big banyan tree in the central square.",
+  "world": "A cheerful Indian jungle village during festival season, with mud-and-bamboo huts, marigold garlands, diyas, a market square and a big banyan tree in the centre.",
   "characters": {
     "bhola": {
       "pace": 2.6,
@@ -35,17 +35,6 @@
         "name": "hi-IN-SwaraNeural",
         "rate": "+10%",
         "pitch": "+14Hz"
-      }
-    },
-    "saaya": {
-      "pace": 3.0,
-      "name_en": "Saaya the shadow ninja",
-      "look": "a mysterious dark silhouette on a rooftop, only glowing yellow eyes and the outline of a sharp ninja mask visible, mist around its feet",
-      "caption_color": "#C77DFF",
-      "voice": {
-        "name": "hi-IN-MadhurNeural",
-        "rate": "-18%",
-        "pitch": "-38Hz"
       }
     },
     "chulbul": {

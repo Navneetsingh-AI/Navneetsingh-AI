@@ -15,28 +15,28 @@ pip install -r requirements.txt
 
 The first build downloads a speech model (about 460 MB) used to time the captions. If that fails or you skip it (`--no-whisper`), captions are timed from pauses in the audio, which is a little less exact.
 
-## Making an episode (series `jungle-ninja`, episode `ep01`)
+## Making an episode (series `jungle-cid`, episode `ep01`)
 
-1. **Characters in Flow (once per series).** Each character is saved in Flow with a portrait, a body, a voice and character info. Voices used: Bhola, Kallu (Fenrir), Chikki (Autonoe), Saaya (Algenib).
+1. **Characters in Flow (once per series).** Each character is saved in Flow with a portrait, a body, a voice and character info. Cast: Bhola, Kallu, Chikki, Chulbul.
 
 2. **Get the prompts**
    ```bash
-   python -m studio prompts jungle-ninja ep01
+   python -m studio prompts jungle-cid ep01
    ```
-   Open `series/jungle-ninja/out/ep01/flow_prompts.md`.
+   Open `series/jungle-cid/out/ep01/flow_prompts.md`.
 
 3. **Generate each shot in Flow.** Attach the saved characters named in the prompt, paste the prompt, generate. For shot 2 onward, start from the last frame of the previous clip. Save the clips as:
    ```
-   series/jungle-ninja/clips/ep01/shot01.mp4 ... shot05.mp4
+   series/jungle-cid/clips/ep01/shot01.mp4 ... shot05.mp4
    ```
 
 4. **Build**
    ```bash
-   python -m studio build jungle-ninja ep01
+   python -m studio build jungle-cid ep01
    ```
-   Output: `series/jungle-ninja/out/ep01/ep01.mp4`
+   Output: `series/jungle-cid/out/ep01/ep01.mp4`
 
-Optional: drop a royalty-free music file (mp3/wav/m4a) into `series/jungle-ninja/music/`. It plays quietly under the voices.
+Optional: drop a royalty-free music file (mp3/wav/m4a) into `series/jungle-cid/music/`. It plays quietly under the voices.
 
 ## Voice modes
 
@@ -46,7 +46,7 @@ Optional: drop a royalty-free music file (mp3/wav/m4a) into `series/jungle-ninja
 ## Testing without Flow clips
 
 ```bash
-python -m studio build jungle-ninja ep01 --placeholders --no-whisper
+python -m studio build jungle-cid ep01 --placeholders --no-whisper
 ```
 Uses green placeholder clips for any missing shots.
 

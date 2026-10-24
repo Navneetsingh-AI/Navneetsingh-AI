@@ -1,0 +1,91 @@
+{
+  "title": "Episode 1 - Kya main hi chor hoon?",
+  "end_card": "पार्ट 2 कल!\nअसली चोर कौन?",
+  "shots": [
+    {
+      "visual": "Early morning in the village square after the festival night. The big brass thali on the decorated table is empty except for crumbs. Bhola has just woken up under the banyan tree with laddoo crumbs and sticky syrup on his snout, paws and scarf. He stares at his sticky paws, then at the empty thali, in horror.",
+      "camera": "quick push-in on Bhola's horrified face, then a shot of his sticky paws",
+      "lines": [
+        {
+          "speaker": "bhola",
+          "hi": "लड्डू गायब... मेरे हाथ में चाशनी?! क्या मैं ही चोर हूँ?"
+        }
+      ]
+    },
+    {
+      "visual": "Kallu the crow sits on a branch above Bhola with a stolen laddoo hidden behind his wing, which the audience can see but Bhola cannot. Kallu puts on a fake worried face for Bhola, while a sly smirk slips out when Bhola looks away.",
+      "camera": "medium two-shot, Kallu in foreground",
+      "cast": [
+        "bhola"
+      ],
+      "lines": [
+        {
+          "speaker": "kallu",
+          "hi": "मैंने देखा... तू नींद में लड्डू खा गया!"
+        },
+        {
+          "speaker": "bhola",
+          "hi": "हाय राम! अब मेरा क्या होगा?"
+        }
+      ]
+    },
+    {
+      "visual": "Kallu hops down onto Bhola's shoulder and whispers in his ear, glancing around to check nobody is listening. Bhola trembles with huge scared eyes and nods quickly.",
+      "camera": "close two-shot on their faces, Kallu whispering",
+      "cast": [
+        "bhola",
+        "kallu"
+      ],
+      "lines": [
+        {
+          "speaker": "kallu",
+          "hi": "चुप रह, मैं सँभाल लूँगा। बस तेरा समोसा मेरा!"
+        },
+        {
+          "speaker": "bhola",
+          "hi": "ठीक है, ठीक है!"
+        }
+      ]
+    },
+    {
+      "visual": "Chikki the detective fox strides into the square, pops her trench coat collar up and raises her magnifying glass. Behind her tiny Chulbul the white rat scurries along carrying a huge notebook, trips over it and his cap slides over his eyes. Bhola and Kallu freeze.",
+      "camera": "low angle hero shot of Chikki, then cut to Chulbul tripping",
+      "cast": [
+        "bhola",
+        "kallu"
+      ],
+      "lines": [
+        {
+          "speaker": "chikki",
+          "hi": "रुको! मैं इंस्पेक्टर चिक्की!"
+        },
+        {
+          "speaker": "chulbul",
+          "hi": "और मैं सीक्रेट एजेंट चुलबुल!"
+        },
+        {
+          "speaker": "chikki",
+          "hi": "सीक्रेट है, तो चिल्ला मत!"
+        }
+      ]
+    },
+    {
+      "visual": "Cliffhanger. Chikki crouches by the empty thali with her magnifying glass and finds small three-toed prints in the dust next to Bhola's huge paw prints. Chulbul squints at the prints from upside-down. A single black feather drifts down onto Chikki's notebook. She slowly looks up toward the banyan tree, where Kallu freezes with a nervous smile.",
+      "camera": "top-down on the prints, then a slow tilt up from the feather to Kallu in the tree",
+      "cast": [
+        "bhola",
+        "kallu"
+      ],
+      "lines": [
+        {
+          "speaker": "chikki",
+          "hi": "ये निशान भोला के नहीं... चोर कोई और है!"
+        },
+        {
+          "speaker": "chulbul",
+          "hi": "या पैर सिकोड़ लिए?"
+        }
+      ]
+    }
+  ]
+}
