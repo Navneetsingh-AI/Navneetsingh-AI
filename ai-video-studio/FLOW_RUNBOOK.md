@@ -8,7 +8,7 @@ Generate every shot of one episode in Google Flow, download the clips under the 
 Example request: "Follow FLOW_RUNBOOK.md for series `jungle-cid`, episode `ep02`."
 
 ## Before you start
-1. In the repo folder: `git pull origin claude/upbeat-ritchie-aze6ei`, then `cd ai-video-studio` and `pip install -r requirements.txt`.
+1. In the repo folder: `git pull origin claude/upbeat-ritchie-aze6ei`, then `cd ai-video-studio`. If `setup_mac.sh` has been run, a `.venv` folder exists: use `.venv/bin/python` wherever these steps say `python`. Otherwise run `pip install -r requirements.txt`.
 2. `python -m studio prompts <series> <episode>` writes `series/<series>/out/<episode>/flow_prompts.md`, one prompt per shot. If it prints a WARNING, stop and tell the person.
 3. Open Flow in the person's signed-in Chrome. Check the saved characters Bhola, Kallu, Chikki and Chulbul exist. If not, stop and tell the person.
 4. Check the credit balance on screen. Each 8-second Fast clip costs about 20 credits. Tell the person the expected total (shots x 20) before you begin, and stop if the balance is lower.
