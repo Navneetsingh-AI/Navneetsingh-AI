@@ -3,7 +3,7 @@
   "end_card": "पार्ट 3 जल्द आ रहा है!\nबने रहिए!",
   "shots": [
     {
-      "visual": "Dawn in the market square. Every single diya from the lamp stall has vanished, only empty clay trays remain. On the ground lies a small brown newsboy cap. Chikki holds it up between two fingers with her eyebrow raised. Chulbul stares at the cap with wide eyes, sweating.",
+      "visual": "Dawn in the market square. Every single diya from the lamp stall has vanished, only empty clay trays remain. On the ground lies a small brown newsboy cap. Chikki holds it up between two fingers with one eyebrow raised. Chulbul stands beside her, staring at the cap with wide eyes, sweating.",
       "camera": "slow pan across the empty trays, ending on Chikki holding up the cap",
       "lines": [
         {
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "visual": "Chikki clips a tiny pair of handcuffs onto Chulbul's tail. Chulbul wriggles and squeaks, tugging at the handcuffs.",
+      "visual": "Chikki clips a tiny pair of handcuffs onto Chulbul's tail. Chulbul wriggles and squeaks, tugging at the handcuffs, while Chikki stays completely calm.",
       "camera": "medium two-shot, then a close-up on the handcuffs on his tail",
       "lines": [
         {
@@ -31,7 +31,7 @@
       ]
     },
     {
-      "visual": "Chikki sniffs the cap and turns it over with her magnifying glass: tiny golden shimmering dust sticks to the lining. She looks up, serious. Behind her Chulbul slips out of the handcuffs, guilty-looking, and quickly licks a golden crumb off his paw.",
+      "visual": "Chikki sniffs the cap and turns it over under her magnifying glass: tiny golden shimmering dust sticks to the lining. She looks up, serious. Behind her, out of focus, Chulbul slips out of the handcuffs far too easily and quickly licks a golden crumb off his paw.",
       "camera": "extreme close-up on the golden dust under the magnifying glass, then pull back to Chikki",
       "lines": [
         {
@@ -45,7 +45,7 @@
       ]
     },
     {
-      "visual": "Chikki finds a folded note tucked in the cap lining and unfolds it. Bhola leans in over her shoulder to read it. A dramatic close-up of the note, then Bhola faints backward with a thud.",
+      "visual": "Chikki finds a folded note tucked in the cap lining and unfolds it. The note shows a hand-drawn golden laddoo and a golden paw-print stamp, with no readable writing. Bhola leans in over her shoulder to look. A dramatic close-up of the note, then Bhola faints backward with a thud.",
       "camera": "close-up on the note in Chikki's paws, then wide as Bhola faints",
       "lines": [
         {
@@ -59,7 +59,7 @@
       ]
     },
     {
-      "visual": "Cliffhanger. Kallu the crow alone on a roof edge at sunrise, rubbing his wings together slowly with a sly grin, looking down at the village.",
+      "visual": "Cliffhanger. Kallu the crow alone on a rooftop edge at sunrise. A tiny folded note with a golden paw-print stamp lies at his feet. He looks at it, grins slyly, then gulps the note down like a snack and rubs his wings together slowly, looking down at the village.",
       "camera": "slow push-in on Kallu's grin",
       "tail": 1.5,
       "lines": [

@@ -52,7 +52,7 @@ The boss is **Chulbul**. Chikki had been secretly packing to leave for a bigger 
 | Ep | Hidden clue about Chulbul | Where |
 | --- | --- | --- |
 | 1 | A small gold paw-print sticker on his notebook cover | Shot 3 (arrival) |
-| 2 | Licks gold dust off his paw, slips out of the handcuffs too easily | Shot 3 (done) |
+| 2 | Licks gold dust off his paw, slips out of the handcuffs too easily; the golden paw stamp on the note is the same paw as his notebook sticker | Shot 3 and shot 4 |
 | 3 | Falls asleep exactly when the shadow crosses; gold smudges on his paws | Shot 3 |
 | 4 | Volunteers to guard Bhola's cell and "brings food"; a tiny suitcase is visible under Chikki's desk | Background |
 | 5 | His sneeze ruins the trap right before Kallu would have stepped in it | The sneeze looks like an accident |
